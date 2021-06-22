@@ -17,7 +17,7 @@ To determine available CEC-compatible equipment on the bus, use
 
 which for me results in the following output:
 
- 
+ ![Screenshot](https://github.com/coppertech/rPi-Magic-MIrror/blob/main/scan.png)
 
 Source 3 is a Sony A/V media center including tuner, and multiple HDMI sources. Unit 0 is a Samsung TV. My desire is to have the TV display the Magic MIrror when no other audio/video is being displayed by the A/V source. The A/V automatically switches to standby after 3 minutes. So I used the following bash command in a shell script run by cron every minute to control the source change on the TV.
 
