@@ -47,10 +47,12 @@ ended up implementing the following modules on my initial version:
 To display my Google calendars I needed the "private url". THe public URL will not work. The URL is available to the
 calendar owner through the individual calendar settings under "Integrate Calendar".
 
-I added each calendar definition under CalendarExt2 in the config.js file then selected which calendars to display in the default view.
+I added each individual calendar definition with the private url under CalendarExt2 in the config.js file then selected which calendars to display in the default view.
 For Nicehash, which displays crypto-mining information from your nicehash account, you need an API key. The same goes
 for weather. The Calendar (upcoming events) uses the same private URl and CalendarExt2. I didn't all all the same calendars under the 
 calendar module, as I didn't want entries from all those same calendars to show up on the upcoming events list.
+
+![MM Display](https://github.com/coppertech/rPi-Magic-MIrror/blob/main/MM_Screenshot.png)
 
 ## Development Issues ##
 
@@ -59,4 +61,4 @@ machine to the config.js file in place of "localhost". then use a browser to go 
 unable to get the MM to display on both a remote browser and the HDMI inteface (localhost). So I had to switch back and forth.
 I found some changes required a restart, not just a "touch" to config.js.
 
-While not *new* to css, I wam by no means an expert. That took some learning to get it set up where I was satisfied.
+While not *new* to css, I am by no means an expert. That took some learning to get it set up where I was satisfied.
