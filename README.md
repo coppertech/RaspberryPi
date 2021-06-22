@@ -32,3 +32,31 @@ The script checks to see the power on the A/V unit is in standby mode (no active
 _Note: My Samsung TV has an issue in it's CEC implementation (Anynet+) where the standby command is unsupported. I am unable to put the TV in standby mode via the cec-utils interface. This prevents me from doing timed power-on and power-off until I find a workaround_
 
 
+## MM Display ##
+
+I wanted to simulate my Google calendar (along with shared calendars) in the same format. I also wanted a simple clock
+and an upcoming events list. From there I just looked through the Third Party Modules to see what would be cool. I
+ended up implementing the following modules on my initial version:
+
+- MMM_CaldendarExt2
+- MMM_Nicehash
+- MMM-MWWordofTheDay
+- weather (default module)
+- calendar (default module)
+
+To display my Google calendars I needed the "private url". THe public URL will not work. The URL is available to the
+calendar owner through the individual calendar settings under "Integrate Calendar".
+
+I added each calendar definition under CalendarExt2 in the config.js file then selected which calendars to display in the default view.
+For Nicehash, which displays crypto-mining information from your nicehash account, you need an API key. The same goes
+for weather. The Calendar (upcoming events) uses the same private URl and CalendarExt2. I didn't all all the same calendars under the 
+calendar module, as I didn't want entries from all those same calendars to show up on the upcoming events list.
+
+## Development Issues ##
+
+I found it difficult to make changes remotely, but was able to view the calendar remotely by adding the IP of the remote
+machine to the config.js file in place of "localhost". then use a browser to go to the rPi port 8080. Unfortunately, I was 
+unable to get the MM to display on both a remote browser and the HDMI inteface (localhost). So I had to switch back and forth.
+I found some changes required a restart, not just a "touch" to config.js.
+
+While not *new* to css, I wam by no means an expert. That took some learning to get it set up where I was satisfied.
