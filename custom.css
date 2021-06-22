@@ -1,0 +1,136 @@
+body {
+	background-size: cover;
+        margin: 20px; 
+        height: calc(100% - 40px);
+        width: calc(100% - 40px);
+}
+
+body::before {
+      content: "";
+      background-image: url('BBend.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.40;
+}
+
+
+.xsmall {
+        font-size: 17px;
+}
+
+.region.top.right {
+        width: 23%;
+}
+
+.region.top.left {
+        width: 77%;
+}
+
+.calendar .time {
+        padding-left: 20px;
+        color: #FFF;
+        font-weight: normal;
+}
+
+.MMM-DarkSkyForecast .module-content {
+        width: unset;
+}
+
+.CX2 {
+        --font-size: 14px;
+}
+
+.CX2 .event {
+        padding: 0px;
+}
+
+.CX2 .weekSlot .timelineSleeve {
+        height: calc(var(--font-size) + 5px);
+}
+
+.CX2 .weeksmark {
+        display:none;
+}
+
+.CX2 .slot .slotFooter {
+  background: #000000;
+  height:calc(var(--font-size) + 6px);
+  text-align:right;
+  font-weight:bold;
+  padding-right:5px;
+}
+
+.CX2 .event.passed::before {
+        background: none;
+}
+
+.CX2 .cellSlot.weekday_6 .slotSubTitle {
+        color: #F66;
+}
+
+.CX2 .cellSlot.weekday_7 .slotSubTitle {
+        color: #F66;
+}
+
+.CX2 .cellSlot .slotTitle, .CX2 .cellSlot .slotSubTitle, .CX2 .cellSlot .slotAltTitle {
+        font-size: 20px;
+        color: #FFF;
+}
+
+.CX2 .today .slotHeader {
+        background: rgba(64,64,64,0.8);
+        color: #000;
+}
+
+.CX2 .today .slotFooter {
+        background: #ffffff50;
+        color: #000;
+}
+
+.CX2 .today .slotHeader .slotTitle {
+        color: #FFF;
+}
+
+.CX2 .today .slotContent {
+        background: #ffffff50;
+        #border: 1px solid white;
+}
+
+.CX2 .me, .me.event.fullday {
+        border-radius: 5px;
+        background-color: #83CCD5;
+        color: #000;
+}
+
+.CX2 .xjob, .xjob.event.fullday {
+        border-radius: 5px;
+        background-color: #FF4D4D;
+        color: #000;
+}
+
+.CX2 .pd, .pd.event.fullday {
+        border-radius: 5px;
+        background-color: #4F9BF7;
+        color: #000;
+}
+
+.CX2 .holiday, .holiday.event.fullday {
+        border-radius: 5px;
+        background-color: #7B9CCC;
+        color: #000;
+
+.CX2 .slot > .slotContent {
+        background-image: none;
+}
+
+.CX2 .monthViewTitle {
+        text-align: left;
+}
+
+.CX2 .eventTitle {
+        font-weight: normal;
+}
