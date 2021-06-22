@@ -34,7 +34,7 @@ _Note: My Samsung TV has an issue in it's CEC implementation (Anynet+) where the
 
 ## MM Display ##
 
-I wanted to simulate my Google calendar (along with shared calendars) in the same format. I also wanted a simple clock
+I wanted to simulate my Google calendar (along with shared calendars) in the same format as on Google. I also wanted a simple clock
 and an upcoming events list. From there I just looked through the Third Party Modules to see what would be cool. I
 ended up implementing the following modules on my initial version:
 
@@ -43,13 +43,14 @@ ended up implementing the following modules on my initial version:
 - MMM-MWWordofTheDay
 - weather (default module)
 - calendar (default module)
+- clock (defalut module)
 
-To display my Google calendars I needed the "private url". THe public URL will not work. The URL is available to the
+To display my Google calendars I needed the "private url". The public url will not work. The url is available to the
 calendar owner through the individual calendar settings under "Integrate Calendar".
 
 I added each individual calendar definition with the private url under CalendarExt2 in the config.js file then selected which calendars to display in the default view.
 For Nicehash, which displays crypto-mining information from your nicehash account, you need an API key. The same goes
-for weather. The Calendar (upcoming events) uses the same private URl and CalendarExt2. I didn't all all the same calendars under the 
+for weather. The Calendar (upcoming events) uses the same private url and CalendarExt2. I didn't all all the same calendars under the 
 calendar module, as I didn't want entries from all those same calendars to show up on the upcoming events list.
 
 ![MM Display](https://github.com/coppertech/rPi-Magic-MIrror/blob/main/MM_Screenshot.png)
