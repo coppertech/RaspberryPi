@@ -4,15 +4,19 @@ This is a pi project to create a magic mirror type display on a primary display 
 
 Off/On automation on a schedule is a secondary item.
 
+
 ## HDMI Source Control ## 
 
 AV Control is handled using the cec-utils package. I installed it using the standard install:
+
 `sudo apt install cec-utils`
 
-I will not go into details on cec-utils/cec-client. Help is readily available. But, a full list of commands under cec-client is available using 
+I will not go into details on cec-utils/cec-client. Help is readily available. But, a full list of commands under cec-client is available using
+
 `cec-client -h`
 
 To determine available CEC-compatible equipment on the bus, use
+
 `echo 'scan' | cec-client -s -d 1`
 
 which for me results in the following output:
@@ -23,7 +27,7 @@ Source 3 is a Sony A/V media center including tuner, and multiple HDMI sources. 
 
 `echo 'pow 3' | cec-client -s -d 1 | grep 'power status: standby' 2>&1>>/dev/null  && echo 'pow 0' | cec-client -s -d 1 | grep 'power status: on' 2>&1>>/dev/null && echo 'Changing source...' && echo 'tx 1f:82:40:00' | cec-client -s -d 1`
 
-Essentially, it checks to see the power on the A/V unit is in standby mode (no active source) and that the TV is on. If so, I send the command on the HDMI bus to tell the TV to change to the rPi MM source (HDMI 4). I do not want the source switching if the TV is off, as it will automatically power it on. I only want it displayed when the TV is left on.
+The script checks to see the power on the A/V unit is in standby mode (no active source) and that the TV is on. If so, I send the command on the HDMI bus to tell the TV to change to the rPi MM source (HDMI 4). I do not want the source switching if the TV is off, as it will automatically power it on. I only want it displayed when the TV is left on.
 
 _Note: My Samsung TV has an issue in it's CEC implementation (Anynet+) where the standby command is unsupported. I am unable to put the TV in standby mode via the cec-utils interface. This prevents me from doing timed power-on and power-off until I find a workaround_
 
