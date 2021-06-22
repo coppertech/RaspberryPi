@@ -34,6 +34,7 @@ _Note: My Samsung TV has an [issue](http://github.com/coppertech/rPi-Magic-MIrro
 
 ## MM Display ##
 
+I installed Magic Mirror using the standard install procedures as defined in [docs.magicmirror.builders](https://docs.magicmirror.builders/getting-started/installation.html#manual-installation).
 I wanted to simulate my Google calendar (along with shared calendars) in the same format as on Google. I also wanted a simple clock
 and an upcoming events list. From there I just looked through the Third Party Modules to see what would be cool. I
 ended up implementing the following modules on my initial version:
