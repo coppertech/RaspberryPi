@@ -4,7 +4,7 @@ This is a pi project to create a magic mirror type display on a primary display 
 
 Off/On automation on a schedule is a secondary item.
 
-### HDMI Source Control ### 
+## HDMI Source Control ## 
 
 AV Control is handled using the cec-utils package. I installed it using the standard install:
 `sudo apt install cec-utils`
