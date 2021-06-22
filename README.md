@@ -29,7 +29,7 @@ Source 3 is a Sony A/V media center including tuner, and multiple HDMI sources. 
 
 The script checks to see the power on the A/V unit is in standby mode (no active source) and that the TV is on. If so, I send the command on the HDMI bus to tell the TV to change to the rPi MM source (HDMI 4). I do not want the source switching if the TV is off, as it will automatically power it on. I only want it displayed when the TV is left on.
 
-_Note: My Samsung TV has an [issue](#1) in it's CEC implementation (Anynet+) where the standby command is unsupported. I am unable to put the TV in standby mode via the cec-utils interface. This prevents me from doing timed power-on and power-off until I find a workaround_
+_Note: My Samsung TV has an [issue](#2) in it's CEC implementation (Anynet+) where the standby command is unsupported. I am unable to put the TV in standby mode via the cec-utils interface. This prevents me from doing timed power-on and power-off until I find a workaround_
 
 
 ## MM Display ##
